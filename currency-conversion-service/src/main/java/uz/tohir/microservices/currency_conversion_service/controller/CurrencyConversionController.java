@@ -1,5 +1,7 @@
 package uz.tohir.microservices.currency_conversion_service.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,6 +19,8 @@ import java.util.HashMap;
 @RequestMapping("/currency-conversion")
 public class CurrencyConversionController {
 
+    private Logger logger = LoggerFactory.getLogger(CurrencyConversionController.class);
+
     @Autowired
     private CurrencyExchangeProxy proxy;
 
@@ -28,6 +32,9 @@ public class CurrencyConversionController {
             @PathVariable("from") String from,
             @PathVariable("to") String to,
             @PathVariable("quantity") BigDecimal quantity){
+
+        //CHANGE-KUBERNETES
+        logger.info("calculateCurrencyConversion called with {} to {} with {}",from,to,quantity.toString());
 
         HashMap<String, String> uriVariables = new HashMap<>();
         uriVariables.put("from", from);
@@ -57,6 +64,10 @@ public class CurrencyConversionController {
             @PathVariable("from") String from,
             @PathVariable("to") String to,
             @PathVariable("quantity") BigDecimal quantity){
+
+        //CHANGE-KUBERNETES
+        logger.info("calculateCurrencyConversionFeign called with {} to {} with {}",from,to,quantity.toString());
+
 
         CurrencyConversion currencyConversion = proxy.retrieveExchangeValue(from,to);
 

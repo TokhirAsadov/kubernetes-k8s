@@ -10,8 +10,8 @@
 	</parent>
 	<groupId>uz.tohir.microservices</groupId>
 	<artifactId>currency-exchange-service</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>currency-exchange-service</name>
+	<version>0.0.11-SNAPSHOT</version><!-- CHANGE-KUBERNETES -->
+	<name>currency-exchange-service-kubernetes</name><!-- CHANGE-KUBERNETES -->
 	<description>Centralized Configuration Server</description>
 	<url/>
 	<licenses>
@@ -41,7 +41,9 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		<dependency>
+
+		<!-- CHANGE-KUBERNETES -->
+		<!--<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
@@ -49,7 +51,7 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-		</dependency>
+		</dependency>-->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -67,10 +69,12 @@
 			<groupId>io.micrometer</groupId>
 			<artifactId>micrometer-tracing-bridge-otel</artifactId>
 		</dependency>
-		<dependency>
+
+		<!-- CHANGE-KUBERNETES -->
+		<!--<dependency>
 			<groupId>io.opentelemetry</groupId>
 			<artifactId>opentelemetry-exporter-zipkin</artifactId>
-		</dependency>
+		</dependency>-->
 
 		<dependency>
 			<groupId>io.github.resilience4j</groupId>

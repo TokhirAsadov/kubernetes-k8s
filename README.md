@@ -62,7 +62,7 @@ kubectl delete pod hello-world-rest-api-67c79fd44f-8bhdt
 
 gcloud container clusters get-credentials guvalakat-cluster --zone us-central1-c --project solid-course-258105
 docker login
-docker push in28min/mmv2-currency-exchange-service:0.0.11-SNAPSHOT
+docker push guvalakat/mmv3-currency-exchange-service:0.0.11-SNAPSHOT
 docker push in28min/mmv2-currency-conversion-service:0.0.11-SNAPSHOT
 
 kubectl create deployment currency-exchange --image=in28min/mmv2-currency-exchange-service:0.0.11-SNAPSHOT

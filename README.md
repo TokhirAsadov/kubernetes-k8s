@@ -75,7 +75,7 @@ kubectl get replicaset
 kubectl get rs
 kubectl get all
 
-kubectl create deployment currency-conversion --image=in28min/mmv2-currency-conversion-service:0.0.11-SNAPSHOT
+kubectl create deployment currency-conversion --image=guvalakat/mmv3-currency-conversion-service:0.0.11-SNAPSHOT
 kubectl expose deployment currency-conversion --type=LoadBalancer --port=8100
 
 kubectl get svc --watch

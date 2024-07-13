@@ -65,7 +65,7 @@ docker login
 docker push guvalakat/mmv3-currency-exchange-service:0.0.11-SNAPSHOT
 docker push guvalakat/mmv3-currency-conversion-service:0.0.11-SNAPSHOT
 
-kubectl create deployment currency-exchange --image=in28min/mmv2-currency-exchange-service:0.0.11-SNAPSHOT
+kubectl create deployment currency-exchange --image=guvalakat/mmv3-currency-exchange-service:0.0.11-SNAPSHOT
 kubectl expose deployment currency-exchange --type=LoadBalancer --port=8000
 kubectl get svc
 kubectl get services

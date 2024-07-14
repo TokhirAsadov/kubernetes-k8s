@@ -114,5 +114,5 @@ kubectl get configmap currency-conversion -o yaml >> configmap.yaml
 watch -n 0.1 curl http://34.66.241.150:8100/currency-conversion-feign/from/USD/to/INR/quantity/10
 
 docker push guvalakat/mmv3-currency-conversion-service:0.0.12-SNAPSHOT
-docker push in28min/mmv2-currency-exchange-service:0.0.12-SNAPSHOT
+docker push guvalakat/mmv3-currency-exchange-service:0.0.12-SNAPSHOT
 ```

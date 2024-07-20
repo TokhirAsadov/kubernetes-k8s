@@ -8,3 +8,12 @@ Currency Conversion Service
 http://localhost:8100/currency-conversion/feign/from/USD/to/SUM/quantity/100
 
 http://34.72.103.54:8100/currency-conversion/feign/from/USD/to/SUM/quantity/100
+
+
+currency-exchange
+currency-conversion
+service-name
+
+CURRENCY_EXCHANGE_SERVICE_HOST
+CURRENCY_CONVERSION_SERVICE_HOST
+SERVICE_NAME_SERVICE_HOST

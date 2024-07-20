@@ -9,7 +9,8 @@ import uz.tohir.microservices.currency_conversion_service.entity.CurrencyConvers
 //@FeignClient(name = "currency-exchange-service")
 
 // CHANGE-KUBERNETES
-@FeignClient(name = "currency-exchange-service",url = "${CURRENCY_EXCHANGE_SERVICE_HOST:http://localhost}:8000")
+//@FeignClient(name = "currency-exchange-service",url = "${CURRENCY_EXCHANGE_SERVICE_HOST:http://localhost}:8000")
+@FeignClient(name = "currency-exchange-service",url = "${CURRENCY_EXCHANGE_URI:http://localhost}:8000")
 public interface CurrencyExchangeProxy {
 
     @GetMapping("/currency-exchange/from/{from}/to/{to}")

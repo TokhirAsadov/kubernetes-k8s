@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>uz.tohir.microservices</groupId>
 	<artifactId>currency-conversion-service</artifactId>
-	<version>0.0.12-SNAPSHOT</version><!-- CHANGE-KUBERNETES -->
+	<version>0.0.13-SNAPSHOT</version><!-- CHANGE-KUBERNETES -->
 	<name>currency-conversion-service-kubernetes</name><!-- CHANGE-KUBERNETES -->
 	<description>Demo project for Spring Boot</description>
 	<url/>
@@ -76,12 +76,6 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-sleuth</artifactId>
-			<version>3.1.11</version>
 		</dependency>
 
 		<dependency>

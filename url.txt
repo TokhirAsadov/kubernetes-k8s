@@ -1,13 +1,13 @@
 Currency Exchange Service
 http://localhost:8000/currency-exchange/from/USD/to/SUM
 
-http://34.27.163.76:8000/currency-exchange/from/USD/to/SUM
+http://35.202.71.226:8000/currency-exchange/from/USD/to/SUM
 
 
 Currency Conversion Service
 http://localhost:8100/currency-conversion/feign/from/USD/to/SUM/quantity/100
 
-http://34.72.103.54:8100/currency-conversion/feign/from/USD/to/SUM/quantity/100
+http://35.222.56.229:8100/currency-conversion/feign/from/USD/to/SUM/quantity/100
 
 
 currency-exchange

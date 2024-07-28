@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   annotations:
     autopilot.gke.io/resource-adjustment: '{"input":{"containers":[{"name":"mmv3-currency-conversion-service"}]},"output":{"containers":[{"limits":{"cpu":"500m","ephemeral-storage":"1Gi","memory":"2Gi"},"requests":{"cpu":"500m","ephemeral-storage":"1Gi","memory":"2Gi"},"name":"mmv3-currency-conversion-service"}]},"modified":true}'
-    autopilot.gke.io/warden-version: 2.9.48
+    autopilot.gke.io/warden-version: 2.9.50
     deployment.kubernetes.io/revision: "1"
   labels:
     app: currency-conversion
@@ -25,7 +25,7 @@ spec:
         app: currency-conversion
     spec:
       containers:
-      - image: guvalakat/mmv3-currency-conversion-service:0.0.12-SNAPSHOT
+      - image: guvalakat/mmv3-currency-conversion-service:0.0.13-SNAPSHOT
         imagePullPolicy: IfNotPresent
         name: mmv3-currency-conversion-service
         readinessProbe:

@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   annotations:
     autopilot.gke.io/resource-adjustment: '{"input":{"containers":[{"name":"mmv3-currency-exchange-service"}]},"output":{"containers":[{"limits":{"cpu":"500m","ephemeral-storage":"1Gi","memory":"2Gi"},"requests":{"cpu":"500m","ephemeral-storage":"1Gi","memory":"2Gi"},"name":"mmv3-currency-exchange-service"}]},"modified":true}'
-    autopilot.gke.io/warden-version: 2.9.48
+    autopilot.gke.io/warden-version: 2.9.50
     deployment.kubernetes.io/revision: "1"
   labels:
     app: currency-exchange
@@ -30,12 +30,21 @@ spec:
         name: mmv3-currency-exchange-service
         readinessProbe:
           httpGet:
-            port: 8000
             path: /actuator/health/readiness
+            port: 8000
         livenessProbe:
           httpGet:
-            port: 8000
             path: /actuator/health/liveness
+            port: 8000
+        resources:
+          limits:
+            cpu: 500m
+            ephemeral-storage: 1Gi
+            memory: 2Gi
+          requests:
+            cpu: 500m
+            ephemeral-storage: 1Gi
+            memory: 2Gi
       restartPolicy: Always
 ---
 apiVersion: v1
